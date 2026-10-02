@@ -1,121 +1,120 @@
-# Frontend Mentor - Fylo data storage component solution
-
-This is a solution to the [Fylo data storage component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
+# Frontend Mentor - Fylo Data Storage Component Solution
+ 
+This is my solution to the Fylo Data Storage Component challenge on Frontend Mentor. This project focused on building a responsive component from provided mobile and desktop designs using HTML and CSS.
+ 
+## Table of Contents
+ 
+- #overview
+- #the-challenge
+- #screenshot
+- #links
+- #my-process
+- #built-with
+- #what-i-learned
+- #continued-development
+- #ai-collaboration
+- #author
+ 
 ## Overview
-
-### The challenge
-
+ 
+### The Challenge
+ 
 Users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-
+ 
+- View the optimal layout for the component depending on their device's screen size
+ 
 ### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
+ 
+./screenshot.jpg
+ 
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
-
-### Built with
-
-- Semantic HTML5 markup
+ 
+- Solution URL: Add Frontend Mentor solution URL after submission
+- Live Site URL: Add GitHub Pages URL after deployment
+- Repository: https://github.com/qcyrus8j562z1111/fylo-data-storage-component
+ 
+## My Process
+ 
+I approached this project using a mobile-first workflow. I first built the HTML structure for the two main cards and then styled the mobile layout before introducing a media query for larger screens.
+ 
+I also used Git throughout development and made commits at meaningful milestones so the repository shows the progression of the project rather than containing only one final commit.
+ 
+### Built With
+ 
+- Semantic HTML5
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- Responsive media queries
+- CSS gradients
+- CSS pseudo-elements
+- Relative and absolute positioning
+- Git and GitHub
+ 
+### What I Learned
+ 
+This project gave me more practice deciding when Flexbox should control layout and when positioned elements are more appropriate.
+ 
+One example was the storage progress indicator. The outer element represents the complete storage capacity, while the inner element represents the amount used:
+ 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.storage-bar-fill {
+position: relative;
+width: 81.5%;
+height: 100%;
+background: linear-gradient(
+to right,
+var(--color-gradient-start),
+var(--color-gradient-end)
+);
+border-radius: 999px;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+ 
+The `81.5%` width corresponds to 815 GB used out of 1000 GB.
+ 
+I also used a pseudo-element for the small indicator at the end of the progress bar instead of adding another HTML element purely for decoration:
+ 
+```css
+.storage-bar-fill::after {
+content: "";
+position: absolute;
+top: 50%;
+right: 0.125rem;
+width: 0.625rem;
+height: 0.625rem;
+background-color: white;
+border-radius: 50%;
+transform: translateY(-50%);
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
+ 
+Another important lesson was responsive debugging. A small difference between `.storage` and `.storage-component` prevented my desktop Flexbox rules from applying. Working through that issue reinforced how important it is to inspect selectors and verify which CSS rules the browser is actually applying instead of immediately adding more code.
+ 
+### Continued Development
+ 
+I want to continue improving my ability to translate design files into responsive layouts without relying on fixed dimensions everywhere.
+ 
+I also want to keep developing my understanding of:
+ 
+- Flexbox alignment
+- Responsive breakpoint decisions
+- Relative and absolute positioning
+- CSS pseudo-elements
+- Accessible HTML structure
+- Debugging responsive layouts with browser developer tools
+ 
+For future projects, I want to continue building mobile-first and testing intermediate viewport sizes rather than focusing only on the supplied mobile and desktop design widths.
+ 
 ### AI Collaboration
-
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
-
+ 
+I used Microsoft 365 Copilot as a learning and debugging partner during this project.
+ 
+Rather than generating the entire finished solution at once, I worked through the project section by section. AI assistance was used to discuss HTML structure, explain CSS concepts, reason through responsive layout decisions, and debug problems during development.
+ 
+One useful part of the process was debugging the desktop layout. Some suggested changes did not work as expected, so I reverted to the last working state, tested individual CSS changes, inspected selectors, and identified the problem before continuing. This reinforced the importance of understanding and verifying suggested code rather than copying it without testing.
+ 
 ## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+ 
+- GitHub: https://github.com/qcyrus8j562z1111
+- Frontend Mentor: Add your Frontend Mentor profile URL
