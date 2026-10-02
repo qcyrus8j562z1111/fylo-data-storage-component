@@ -25,12 +25,16 @@ Users should be able to:
  
 ### Screenshot
  
-./screenshot.jpg
+<img width="702" height="436" alt="Screenshot 2026-10-02 163453" src="https://github.com/user-attachments/assets/b480cf1d-90d8-4a21-865a-dda61293aea9" />
+
+<img width="305" height="551" alt="Screenshot 2026-10-02 163601" src="https://github.com/user-attachments/assets/8769c291-96b2-4666-b97a-2b5e223905b8" />
+
+
  
 ### Links
  
 - Solution URL: Add Frontend Mentor solution URL after submission
-- Live Site URL: Add GitHub Pages URL after deployment
+- Live Site URL: https://qcyrus8j562z1111.github.io/fylo-data-storage-component/
 - Repository: https://github.com/qcyrus8j562z1111/fylo-data-storage-component
  
 ## My Process
