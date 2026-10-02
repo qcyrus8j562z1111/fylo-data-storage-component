@@ -124,6 +124,46 @@ body {
     font-size: 0.75rem;
 }
 
+/* Storage Labels */
+.storage-limits {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.625rem;
+    font-size: 0.75rem;
+}
+/* 185 Gb Label */
+.storage-remaining {
+    position: absolute;
+    left: 50%;
+    bottom: -2.25rem;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    border-radius: 0.625rem;
+    color: var(--color-grayish-blue);
+}
+
+/* Big Number */
+.storage-remaining strong {
+    color: var(--color-blue-950);
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+/* Little Label */
+.storage-remaining span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    white-space: nowrap;
+}
+
 /* Attributions */
 .attribution { 
     font-size: 0.6875rem; 
