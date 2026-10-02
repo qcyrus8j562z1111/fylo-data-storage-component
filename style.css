@@ -14,10 +14,18 @@
     box-sizing: border-box;
 }
 
+/* Global Layout */
 body {
     margin: 0;
+    min-height: 100vh;
     font-family: "Raleway", sans-serif;
     font-size: 0.875rem;
+
+    background-color: var(--color-blue-950);
+    background-image: url("./images/bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Fylo Card */
@@ -25,6 +33,45 @@ body {
     background-color: var(--color-blue-850);
     padding: 2.5rem;
     border-radius: 0.625rem 6.25rem 0.625rem 0.625rem;
+}
+
+/* Fylo Actions */
+.fylo-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Action Icons */
+.action-icon {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-blue-950);
+    border-radius: 0.625rem;
+}
+
+/*Component Area*/
+.storage-component {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+/* Storage Card */
+.storage-card {
+    position: relative;
+    background-color: var(--color-blue-850);
+    color: var(--color-blue-200);
+    padding: 2rem;
+    border-radius: 0.625rem;
+    text-align: center;
 }
 
 /* Attributions */
