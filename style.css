@@ -167,6 +167,13 @@ body {
 
 /* Desktop Layout */
 @media (min-width: 768px) {
+    body {
+        background-image: url("./images/bg-desktop.png");
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 100% auto;
+    }
+
     .storage-component {
         max-width: 72rem;
         margin: 0 auto;
@@ -181,6 +188,17 @@ body {
         bottom: auto;
         top: -3rem;
         transform: none;
+    }
+
+    .storage-remaining::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -1.25rem;
+        width: 0;
+        height: 0;
+        border-top: 1.25rem solid white;
+        border-left: 1.25rem solid transparent;
     }
 
     .fylo-card {
