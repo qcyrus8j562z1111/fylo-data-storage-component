@@ -164,6 +164,36 @@ body {
     white-space: nowrap;
 }
 
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+    .storage-component {
+        max-width: 72rem;
+        margin: 0 auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.875rem;
+    }
+
+    .storage-remaining {
+        left: auto;
+        right: 2rem;
+        bottom: auto;
+        top: -3rem;
+        transform: none;
+    }
+
+    .fylo-card {
+        width: 21.875rem;
+        flex-shrink: 0;
+    }
+
+    .storage-card {
+        width: 33.75rem;
+        text-align: left;
+    }
+}
+
 /* Attributions */
 .attribution { 
     font-size: 0.6875rem; 
@@ -172,25 +202,4 @@ body {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
-}
-
-/* Desktop Layout */
-@media (min-width: 768px) {
-.storage-component {
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 1.875rem;
-    max-width: 72rem;
-    margin: 0 auto;
-}
-
-.fylo-card {
-    width: 21.875rem;
-    flex-shrink: 0;
-}
-
-.storage-card {
-    width: 33.75rem;
-    text-align: left;
-}
 }
